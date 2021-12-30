@@ -1,0 +1,290 @@
+
+Anotações: Página principal
+
+--------------------------------------------------------------------------------------------------------------------
+arquivo index: é o arquivo/nome padrão para o arquivo principal da sua página html
+
+
+--------------------------------------------------------------------------------------------------------------------
+tag:
+<> indica o início do conteúdo
+</> indica o fim do conteúdo
+
+Tipos:
+h1 - Título da página                - ex. de uso <h1>conteúdo</h1>
+p  - Paragráfo                       - ex. de uso <p>conteúdo</p>
+strong - deixa o conteúdo em negrito - ex. de uso <strong>conteúdo</strong>
+em - deixa o conteúdo em ítalico     - ex. de uso <p><em>conteúdo</em></p>
+
+DOCTYPE - Por padrão deve sempre ser escrita em maiúsculo
+        - Deve sempre ser informado o caracter ! para ser identificada como DOCTYPE Ex. <!DOCTYPE>
+        - Deve sempre ser informado no final a versão do html Ex. <!DOCTYPE html>
+        - <!DOCTYPE html> indica que está sendo utilizada a última versão do html
+        - Não precisa ser fechafa com </>
+
+
+html - É uma tag de conteúdo, para marcar tudo da página como html e que será reinderizado para o navegador     
+     - Por ser de conteúdo, precisa abrir no início (após o doctype) e fechar no fim do conteúdo 
+     - ex. de uso <html>
+                     conteúdo e demais tag´s
+                  </html>
+     - Pode ser informada a propriedade lang="pt-br" para definir a linguagem da página, e ter a possibilidade de tradução da página.             
+     
+
+O html é dividido em duas partes (tag´s):
+
+head - Cabeça
+     - Informações que estão sendo passadas para o navegador
+     - As tag´s <meta> e <title> devem estar dentro da tag <head>
+
+body - Corpo
+     - Informações que deseja exibir na página
+     - Todas as tag´s de conteúdo a ser exibido, devem estar dentro da tag <body> Ex. <h1>,<p>... 
+
+
+meta - Responsável por tratar as acentuações nos textos
+     - Deve ser inserida a propriedade charset="UTF-8" que são dicionários (contém todos os caracteres das línguas utilizadas)
+     - ex. de uso <meta charset="UTF-8">
+     - Não precisa ser fechafa com </>
+
+title - Responsável por dar o nome a página
+
+link - Faz referencia a um arquivo externo
+     - Deve ser inserida dentro de <head>
+     ex. de uso <link rel="stylesheet" href="style.css">
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+style - Propriedade que da estilo ao elemento
+      - Dentro do style e entre aspas é inserido o que se deseja alterar. Ex. o tamanho da fonte
+      - ex. de uso <p style="font-size: 20x"> (Fonte alterada para o tamanho de 20 pixels)
+
+Propriedades style
+
+style="font-size: 20x"     - Aumenta o tamanho da fonte
+style="text-align: center" - Alinha o conteúdo ao centro
+ex. de uso                 - <h1 style="text-align: center">Sobre a Barbearia Alura</h1>
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+CSS
+
+Existem 3 formas de utilizar o css:
+
+1ª - inline (utiliza a propriedade style na linha do conteúdo)
+2ª - em bloco - utilizar a a propriedade style dentro da tag <head>
+   - Ex. de uso:
+              - <style>
+                    p {
+                        text-align: center
+                    }
+                </style>
+
+3ª - Utilizar um arquivo externo
+
+Trabalhando com cores no css:
+
+
+background - Para alterar a cor de fundo da página, pode ser inserida Propriedade background no body, dentro do arquivo.css
+             Ex. de uso: 
+             body{
+                 background: #CCCCCC
+             }
+
+color - Trabalha as cores de elementos
+----------------------------------------
+
+Cores no css:
+
+abcdef
+binário     - 01
+numérico    - 0123456789
+hexadecimal - 0123456789ABCDEF
+
+RGB = Red Green Blue
+
+# _ _ _ _ _ _
+# R R G G B B
+# R R   G G   B B
+# RED  GREEN  BLUE
+
+0 = ausência de cor
+F = Máximo de cor
+
+Ex:
+ R G B
+#000000 - Representa o preto
+#FFFFFF - Representa o branco
+#FF0000 - Representa o vermelho
+
+Obs: No arquivo.css deve ser respeitada a estrutura do xml.
+     Ex: body
+         h1
+         p
+         em strong
+
+id - serve para identificar conteúdos específicos no html
+para referenciar no css, deve ser informado o nome do id
+
+Ex. de uso
+ No html - 
+<p id="missao">
+
+ No css  - 
+ #missao {
+    font-size: 20px;
+}
+
+-----------------------------------------------------------------------------------------------------------
+Trabalhando com imagem
+
+tag <img> - Serve para chamar a imagem
+          - Como é um arquivo externo, precisa ser informado onde está o arquivo externo
+          - Para isso é usada a propriedade source(src)
+          - Ex. de uso <img src="nomeImagem.jpg">
+
+No css é necessário trabalhar com a largura, altura e espaçamentos de um elemento
+
+height - Define a altura do elemento
+width  - Define a largura do elemento 
+padding - Ajustar o espaçamento interno do elemento
+margin - Ajustar o espeçamento externo do elemento
+
+-----------------------------------------------------------------------------------------------------------
+
+Extra - Como funciona um time front-end
+
+UX - User Experience (Usabilidade)
+UI - User Interface (Design)
+Desenvolvedor Front-End
+
+-----------------------------------------------------------------------------------------------------------
+
+Trabalhando com listas
+
+Para incluir novos título, deve sergui a mesma linha do título principal <h1>, alterando a ordem para o novo título ex. <h2>
+
+Para trabalhar com listas, temos dois tipos:
+
+Precisa ser marcado cada lista com a tag <li></li>
+
+Listas ordenadas - <ol>
+                         conteúdo1
+                         conteúdo2
+                         conteúdo3
+                         conteúdo4
+                   </ol>
+
+Listas não ordenadas - <ul>
+                         conteúdo1
+                         conteúdo2
+                         conteúdo3
+                         conteúdo4
+                       </ul>
+
+
+Classes no css
+
+Ex:
+<li classes="beneficios">Atendimento aos Clientes</li>
+
+Para chamar/referenciar uma classe no css, deve ser informado com .nome_da_classe
+
+Ex: .beneficios
+
+-------------------------------------------------------------------------------------------
+
+Criar divisões no conteúdo
+
+Criar dois blocos de conteúdos e separa-los com dois blocos de html
+Para isso devemos utilizar a tag <div>
+Ex: <div>
+          conteúdo 1
+    </div>
+
+    <div>
+          conteúdo 2
+    </div>
+
+Para diferenciar a estrutura <div>, podemos usar um identificador ou uma classe
+
+
+vertical-align: top; - Para alinhar o conteúdo verticalmente para cima
+
+-------------------------------------------------------------------------------------------
+
+Cabeçalho da página
+ 
+Criar uma nova divisão no body antes da primeira imagem <header>
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+Anotações: Nova página
+--------------------------------------------------------------------------------------------------------------------
+
+É preciso criar um novo arquivo .html para cada nova página
+É preciso criar um novo arquivo .css para a nova página
+
+O menu deve ser criado com a tag <li> de lista
+Deve ser criado um link para acessar as páginas através do menu
+     - Para isso deve ser usada a tag <a href>
+     - Ex. de uso - <li><a href="index.html">Home</a></li>
+
+font-weight: bold; - Deixa o texto em negrito
+text-transform: uppercase; - Deixa o texto em maiúsculo
+
+reset.css - Limpa todas as configurações padrões do navegador
+<link rel="stylesheet" href="reset.css">
+
+--------------------------------------------------------------------------------------------------------------------
+Criando listas 
+
+Separar o conteúdo pela tag main(conteúdo principal)
+Criar uma lista não ordenada com <ul>
+Dentro da <ul> criar tbm a <li>
+
+Dentro da tag <li> criar uma estrutura para cada item
+Ex. <li>
+          <h2></h2>
+          <img>
+          <p>Texto1</p>
+          <p>Texto1</p>
+    </li>
+
+
+Reforçando o inline-block
+
+criar uma classe na tag <ul> para atender a todos os itens
+No css, chamar a classe e inserir a propriedade display: inline-block para deixar uma imagem ao lado da outra;
+Ex. .servicos li {display: inline-block
+               }
+
+box-sizing: border-box; - corrige os espaçamentos dos elementos
+
+-----------------------------------------------------------------------------------------------------------
+
+Aplicando bordas
+
+Para montar uma borda:
+border-color: #000000; borda preta
+border-width: 2px; expessura
+border-style: solid;
+
+Ou simplificar com:
+
+border: 2px solid #000000
+
+Arredondar a borda
+
+border-radious: 10px;
+
+----------------------------------------------------------------------------------------------------------
+
+Mapear comportamento quando o mouse está por cima do elemento
+hover
+
+Ex. nav a:hover {
+     color: ...
+
+}
