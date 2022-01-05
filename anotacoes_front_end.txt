@@ -288,3 +288,132 @@ Ex. nav a:hover {
      color: ...
 
 }
+
+--------------------------------------------------------------------------------------------------------
+
+HTML5 e CSS3 parte 3: Trabalhando com formulários e tabelas
+
+Criar formulários:
+
+Utilizar a tag <form>
+Utilizar a tag <input> para receber os dados
+Toda a tag <input> tem um tipo. Ex: nome <input type="text">
+Sempre utilizar a label para dar nome ao campo do input
+
+Ex: 
+<label for="Nome do campo</label>
+<input type="text" id="nomesobrenome">
+
+<textarea> - Permite escrever mais de uma linha
+<input type="radio"> - cria um radio button
+
+
+Configurações no css
+
+Para aproveitar uma configuração já existente no css, basta colocar uma virgula e o nome da propriedade
+Ex. form input, form textarea {}
+
+
+--------------------------
+
+Campo select - Combobox
+
+<select>
+     <options>Manhã</options>
+     <options>Tarde</options>
+     <options>Noite</options>
+</select>
+
+--------------------------
+Tornar o campo obrigatório:
+Utilizar a propriedade required
+Ex. <input type="text" id="nomesobrenome" class="input-padrao" required>
+
+--------------------------
+Para deixar o campo com um exemplo de como deve ser preenchido, utilizar a propiedade placeholder
+Ex.
+<input type="text" id="nomesobrenome" class="input-padrao" required placeholder="Digite seu nome">
+
+Para deixar um campo checkbox marcado como defalt em alguma opção, usar a propiedade checked no input
+Ex.
+<label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email" checked>Email</label>
+
+Para deixar um campo obrigatório deve ser utilizada a propriedade required
+Ex.
+<textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+
+----------------
+
+Quando utilizado campos, não deve ser utilizado a tag <div> e sim <fieldset>
+Para o parágrafo deve ser utilizado a tag <legend>
+
+----------------------
+
+Alterar o tamanho de um elemento ao passar o mouse
+
+.enviar:hover {
+    transform: scale(1.1);
+}
+
+---------------------------
+
+Estrutura simples de tabela
+
+ <table>
+                <tr>
+                    <td>Dia</td>
+                    <td>Horário</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </table>
+
+
+<tr> - linha
+<td> - Colunas
+
+
+Maneira mais correta de estruturar uma tabela
+
+           <table> --- Cabeçalho ---
+                <thead>
+                    <tr>
+                        <td>Dia</td>
+                        <td>Horário</td>
+                    </tr>
+                </thead>   
+                <tbody> ---- Corpo ---
+                    <tr>
+                        <td>Segunda-Feira</td>
+                        <td>13:30 ás 19:00</td>
+                    </tr>
+                    <tr>
+                        <td>Terça á Sábado</td>
+                        <td>09:00 ás 19:00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+A tag table, que representa a tabela
+A tag tr, que representa a linha da tabela
+A tag td, que representa a célula da tabela
+A tag thead, que representa o cabeçalho da tabela
+A tag tbody, que representa o corpo da tabela
+A tag th, que representa a célula do cabeçalho da tabela
+A tag tfoot, que representa o rodapé da tabela
+
+
+Propriedade para mesclar células da tabela
+
+<td colspan="2">Rio de Janeiro</td>
+
+-------------------------
+
