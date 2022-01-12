@@ -1,0 +1,34 @@
+
+Anotações de estudos: Como organizar e estruturar pastas e 
+arquivos em um projeto/site
+-------------------------------------------------
+Criar uma pasta que será o diretório raiz:
+
+Ex:
+meu-site
+
+-------------------------------------------------
+Dentro da pasta raiz do projeto,
+Criar um arquivo com o nome index.html
+
+Para os arquivos css, criar uma pasta dentro do projeto raiz
+
+Para imagens, criar uma pasta img dentro da pasta raiz do projeto.
+
+Para arquivos javascript, criar uma pasta js dentro da pasta raiz do projeto.
+
+Ex:
+
+meu-site
+    - arquivo: index.html
+    - pasta: css
+             - arquivos.css
+    - pasta: img
+             - arquivos.png
+    - pasta: js
+             - arquivos.js  
+
+É aconselhável manter os arquivos html junto ao index, no diretório raiz
+
+Mas tbm pode ser criada uma ou mais pastas para separar outros arquivos html, como
+artigos ou histórias, para melhor separa-las

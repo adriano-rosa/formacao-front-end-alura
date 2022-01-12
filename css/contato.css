@@ -34,7 +34,7 @@ form label, form legend {
 
 .enviar:hover {
     background: rgb(80, 168, 240);
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
 }
 
 table {

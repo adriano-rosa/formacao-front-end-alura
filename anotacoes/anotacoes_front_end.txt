@@ -417,3 +417,201 @@ Propriedade para mesclar células da tabela
 
 -------------------------
 
+HTML e CSS3 Parte 4 - Avançando no CSS
+
+<section> - Utilizar quando o bloco for semantico
+
+Dica - Quando estilo usar classe - class
+     - Quando comportamento identificados - id
+
+Trabalhando margens
+
+margin: 0(cima) 20(direita) 20(baixo) 0(esquerda);
+
+margin: cima|direita|baixo|esquerda;
+
+------------
+
+Float - Desloca o elemento na lateral e deixa os outros elementos ao redor
+
+iframe - cria uma janela na página para exibir algum conteúdo externo
+
+-----------------
+Importando vídeo:
+
+Acessar a opção compartilhar do youtube
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hUAgjTl4MmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+-----------------
+Pseudo-classes
+
+:hover...
+
+Alinhar para cima
+vertical-align: top;
+
+Marcar primeiro elemento de uma lista
+Ex. itens:first-chield {
+    font-weight: bold;
+} 
+
+Marcar último elemento de uma lista
+Ex. itens:last-chield {
+    font-weight: bold;
+} 
+
+Determinar qual elemento marcar
+Ex. itens:nth-chield(4) {
+    font-weight: bold;
+} 
+
+Selecionar somente os pares
+Ex. itens:nth-chield(2n) {
+    font-weight: bold;
+} 
+
+---------------------------
+Melhorando o css
+Fundo com degrade
+
+background: linear-gradient(white,black);
+
+-----------------------------------------
+
+ Pseudo-elementos
+
+ Alterar a primeira letra 
+ .titulo-principal::first-letter {
+    font-weight: bold;
+}
+
+copia simbolos
+.titulo-principal:before {
+    content: "✂";
+}
+
+-----------------------------------------
+
+ Seletores avançados css:
+
+ Selecionar o 1º parágrafo FILHO de um <main>
+
+ Seletor >, para acessar os filhos de determinado elemento. 
+ Por exemplo, para acessar todos os p dentro de main:
+
+ main > p {
+     background: red;
+ }
+
+
+Seletor +, para acessar o primeiro irmão de determinado elemento. 
+Por exemplo, para acessar o primeiro p após um img:
+Selecionar 1º parágrafo depois de uma imagem
+ img + p {
+     background: red;
+ }
+
+Selecionar todos os parágrafos depois da imagem
+Seletor ~, para acessar todos os irmãos de determinado elemento. 
+Por exemplo, para acessar todos os p após um img:
+ img ~ p {
+     background: red;
+ }
+
+Seletor not, para acessar os elementos, exceto algum. 
+Por exemplo, para acessar todos os p dentro de main, exceto o p que tem id missao:
+ Selecionar todos com exeção
+.classe p:not(id=missao) {
+
+}
+ 
+ .principal p:not(#missao) {
+     background: red;
+ }
+
+-----------------------------------
+Cálculos no css
+
+.utensilios {
+    width: calc(40% - 26px);
+    float: left;
+    Margin: 0 20px 20px 
+
+}
+
+.utensilios {
+    width: calc(40% - (26px * 4);
+    float: left;
+    Margin: 0 20px 20px 
+
+}
+
+-------------------------------------
+Opacidade nos elemnetos
+
+.imagemBenef {
+    width: 80%;
+    opacity: 0.8; - Baixa opacidade
+}
+
+.imagemBenef:hover {
+    opacity: 1; - Sem opacidade
+    transition: 500ms;
+}
+
+Opacidade nos textos
+
+.imagemBenef {
+    color: rgba(0,0,0);
+}
+
+-------------------------------------
+
+Sombras nos elementos
+
+Sombra interna
+box-shadow: inset 0 0 30px #FF0000;
+
+Sombra externa
+box-shadow: 10px 10px 10px 0 #000000
+             X    Y   transição
+
+Sombra de texto
+text-shadow: 2px 2px #FF0000;
+
+-------------------------------------
+
+Versão mobile
+
+1º - Identificar quantos pixels tem na tela
+Inserir dentro do <head>
+<meta name="viewport" content="width=device-width">
+    
+    Adptar o css
+    @media screen and (max-width: 480px) {
+        ...propriedades
+    }
+
+Exemplo completo:
+@media screen and (max-width: 480px) {
+    .centralizaMenu {
+        width: auto;
+        text-align: center;
+    }
+
+    .servicos, .principal, .mapa, .tituloBenef {
+        width: auto;
+    }
+
+    .video-benef {
+        width: auto;
+        height: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }

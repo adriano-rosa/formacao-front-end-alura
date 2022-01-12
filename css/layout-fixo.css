@@ -1,12 +1,12 @@
 
 footer {
     text-align: center;
-    background: url("bg.jpg");
+    background-image: url("../img/bg.jpg");
     padding: 40px 0;
 }
 
-.conteudo_fixo {
-    color: #ffffff;
+.rodape {
+    color: white;
     font-size: 13px;
     margin-top: 20px;
 }
